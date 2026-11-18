@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Chafi Xavier · Data Engineer & Cloud Engineer</title>
+    <meta name="description" content="Portfolio profesional de Hassan Chafi Xavier, Data Engineer y Cloud Engineer, centrado en datos a gran escala, AWS, automatización y pipelines.">
+    <link rel="icon" href="./assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="theme-color" content="#0d2b5e">
+    <style>
+      /* Critical header paint: keeps the brand stable while the main stylesheet loads. */
+      .portfolio-topbar{position:fixed;top:0;left:0;right:0;z-index:1200;padding:14px 20px 0;pointer-events:none}
+      .topbar-inner{width:min(1180px,100%);min-height:58px;margin:0 auto;padding:7px 8px 7px 10px;display:flex;align-items:center;gap:18px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(15,42,91,.62);backdrop-filter:blur(18px);pointer-events:auto}
+      .brand-mark-hcx{display:flex;width:88px;min-width:88px;height:42px;padding:3px 4px;align-items:center;justify-content:center;overflow:hidden;text-decoration:none}
+      .brand-logo-img{display:block;width:88px;height:42px;max-width:100%;object-fit:contain}
+      .topbar-nav{margin-left:auto;display:flex;align-items:center;gap:8px}.topbar-nav a{color:#fff;text-decoration:none}
+      @media(max-width:760px){.portfolio-topbar{padding:10px 10px 0}.topbar-nav{display:none}.brand-mark-hcx{width:72px;min-width:72px;height:38px}.brand-logo-img{width:72px;height:38px}}
+    </style>
+    <link rel="stylesheet" href="./style-v10.css?v=20260924-2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="portfolio-topbar">
+        <div class="topbar-inner">
+            <a class="brand-mark-hcx" href="#hero" aria-label="Hassan Chafi Xavier - inicio">
+                <img src="./imagenes/hcx-logo.png" alt="" class="brand-logo-img" width="88" height="42" aria-hidden="true">
+            </a>
+
+            <nav class="topbar-nav" aria-label="Navegación principal">
+                <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="hero-background">
+                <div class="particles-container" id="particles"></div>
+                <div class="floating-shapes" aria-hidden="true">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1 class="hero-title">
+                        Data Engineer <span class="gradient-text">& Cloud Engineer</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Diseño soluciones de ingeniería de datos y despliegues cloud, desde el procesamiento con Python, SQL y PySpark hasta la ejecución de aplicaciones en AWS.
+                    </p>
+
+                    <div class="hero-presentation">
+                        <div class="profile-image-container">
+                            <img src="./imagenes/hassan_xavier.jpg" alt="Hassan Chafi Xavier" class="profile-image">
+                        </div>
+                        <div class="profile-info">
+                            <h2 class="profile-name">Hassan Chafi Xavier</h2>
+                            <p class="profile-title">Data Engineer · Cloud Engineer</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons" aria-label="Acciones principales">
+                        <button class="hero-cta hero-cta-primary" type="button" onclick="scrollToSection('projects')">
+                            <span>Ver proyectos</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                        <a id="cvButton" class="hero-cta hero-cta-secondary" href="./assets/CV-Hassan-Chafi-Xavier-ES.pdf" download="CV-Hassan-Chafi-Xavier-ES.pdf">
+                            <i class="fas fa-file-arrow-down"></i>
+                            <span>Descargar CV</span>
+                        </a>
+                        <button class="hero-cta hero-cta-tertiary" type="button" onclick="scrollToSection('contact')">
+                            <span>Contacto</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-in-delay">
+                    <div class="floating-card">
+                        <div class="card-header">
+                            <div class="card-dots"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="code-snippet" aria-label="Technical focus">
+                                <div class="code-line"><span class="keyword">const</span> <span class="property">engineering</span> = {</div>
+                                <div class="code-line">&nbsp;&nbsp;<span class="property">data</span>: [<span class="string">'Python'</span>, <span class="string">'PySpark'</span>, <span class="string">'SQL'</span>],</div>
+                                <div class="code-line">&nbsp;&nbsp;<span class="property">cloud</span>: [<span class="string">'AWS'</span>],</div>
+                                <div class="code-line">&nbsp;&nbsp;<span class="property">focus</span>: <span class="string">'Data & Cloud'</span></div>
+                                <div class="code-line">};</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack" aria-label="Main technologies">
+                        <div class="tech-item" data-tech="Python" title="Python"><i class="fab fa-python"></i></div>
+                        <div class="tech-item" data-tech="SQL" title="SQL"><i class="fas fa-database"></i></div>
+                        <div class="tech-item" data-tech="AWS" title="AWS"><i class="fab fa-aws"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enfoque -->
+        <section id="about" class="about focus-section">
+            <div class="container">
+                <div class="section-header focus-section-header">
+                    <div class="section-badge"><i class="fas fa-compass"></i><span>Enfoque</span></div>
+                    <h2 class="section-title">Datos, infraestructura y automatización</h2>
+                    <p class="section-subtitle">Mi trabajo combina procesamiento de datos, desarrollo en Python e infraestructura AWS. Priorizo soluciones reproducibles, seguras y adaptadas al problema real.</p>
+                </div>
+
+                <div class="focus-grid">
+                    <article class="focus-card">
+                        <div class="focus-number">01</div>
+                        <div class="focus-icon"><i class="fas fa-diagram-project"></i></div>
+                        <h3>Ingeniería de datos</h3>
+                        <p>Transformación y validación de datos con Python, SQL y PySpark, con atención a la calidad y a la eficiencia del procesamiento.</p>
+                    </article>
+
+                    <article class="focus-card">
+                        <div class="focus-number">02</div>
+                        <div class="focus-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Arquitectura AWS</h3>
+                        <p>Despliegue de sitios y aplicaciones con servicios administrados, configuración de redes, permisos y observabilidad.</p>
+                    </article>
+
+                    <article class="focus-card">
+                        <div class="focus-number">03</div>
+                        <div class="focus-icon"><i class="fas fa-gears"></i></div>
+                        <h3>Contenedores y automatización</h3>
+                        <p>Entornos reproducibles con Docker y procesos que facilitan las pruebas, el despliegue y el mantenimiento.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-project-diagram"></i><span>Proyectos</span></div>
+                    <h2 class="section-title">Proyectos destacados</h2>
+                    <p class="section-subtitle">Dos proyectos reales: una web pública servida desde AWS y una API contenerizada, desplegada y validada con ECS Fargate.</p>
+                </div>
+
+                <div class="projects-grid portfolio-projects-grid">
+                    <article class="project-card portfolio-project-card">
+                        <div class="project-visual">
+                            <img src="./imagenes/Malaga-Stays-AWS-Architecture.png" alt="Arquitectura AWS de Málaga Stays" class="project-image project-image-architecture">
+                            <span class="project-index">01</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-heading-row">
+                                <h3 class="project-title">Málaga Stays</h3>
+                                <span class="project-status">En producción</span>
+                            </div>
+                            <p class="project-description">Web de alojamientos turísticos con infraestructura AWS: contenido en S3 privado, distribución global mediante CloudFront, dominio gestionado con Route 53 y HTTPS con ACM. El acceso al origen está restringido mediante OAC.</p>
+                            <p class="project-proof"><i class="fas fa-check-circle" aria-hidden="true"></i> Sitio público operativo · Entrega HTTPS · Origen S3 privado</p>
+                            <div class="project-tags">
+                                <span class="project-tag">AWS</span>
+                                <span class="project-tag">Amazon S3</span>
+                                <span class="project-tag">CloudFront</span>
+                                <span class="project-tag">Route 53</span>
+                                <span class="project-tag">ACM</span>
+                                <span class="project-tag">OAC</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="project-link primary project-link-button" id="openArchitecture">
+                                    <i class="fas fa-diagram-project"></i>
+                                    <span>Ver arquitectura</span>
+                                </button>
+                                <a href="https://malaga-stays.com/" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Visitar web</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card portfolio-project-card project-card-qr">
+                        <div class="project-visual project-visual-qr">
+                            <span class="project-index">02</span>
+                            <div class="qr-project-visual" aria-hidden="true">
+                                <span class="qr-visual-orbit qr-visual-orbit-one"></span>
+                                <span class="qr-visual-orbit qr-visual-orbit-two"></span>
+                                <div class="qr-visual-icon"><i class="fas fa-qrcode"></i></div>
+                                <span class="qr-visual-caption">PYTHON API <span>→</span> DOCKER <span>→</span> AWS</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-heading-row">
+                                <h3 class="project-title">QR Code Generator API</h3>
+                                <span class="project-status project-status-verified">Despliegue probado</span>
+                            </div>
+                            <p class="project-description">API REST con FastAPI para generar códigos QR en PNG. Construí la imagen con Docker, la publiqué en ECR y verifiqué su ejecución en ECS Fargate con logs en CloudWatch. La demo se desplegó temporalmente para controlar costes.</p>
+                            <p class="project-proof"><i class="fas fa-check-circle" aria-hidden="true"></i> Despliegue validado · HTTP 200 · Logs en CloudWatch</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">FastAPI</span>
+                                <span class="project-tag">Docker</span>
+                                <span class="project-tag">ECR</span>
+                                <span class="project-tag">ECS / Fargate</span>
+                                <span class="project-tag">CloudWatch</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="project-link project-link-disabled" disabled aria-label="Diagrama de arquitectura pendiente">
+                                    <i class="fas fa-diagram-project"></i>
+                                    <span>Arquitectura próximamente</span>
+                                </button>
+                                <a href="https://github.com/hassxa/qr-code-generator-api" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                                    <i class="fab fa-github"></i>
+                                    <span>Ver repositorio</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-envelope"></i><span>Contacto</span></div>
+                    <h2 class="section-title">Contacto</h2>
+                    <p class="section-subtitle">Puedes encontrarme por email, LinkedIn o GitHub.</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info contact-grid-equal">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>hassan.chafi@outlook.com</p>
+                                <a href="mailto:hassan.chafi@outlook.com" class="contact-link">Enviar email</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p>Perfil profesional</p>
+                                <a href="https://www.linkedin.com/in/hassan-chafi-xavier-b27b501b0" target="_blank" rel="noopener noreferrer" class="contact-link">Ver perfil</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <p>@hassxa</p>
+                                <a href="https://github.com/hassxa" target="_blank" rel="noopener noreferrer" class="contact-link">Ver GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Architecture Modal -->
+    <div id="architectureModal" class="modal" aria-hidden="true">
+        <div class="modal-content architecture-modal-content" role="dialog" aria-modal="true" aria-labelledby="architectureTitle">
+            <div class="modal-header">
+                <h2 id="architectureTitle">Málaga Stays · AWS Architecture</h2>
+                <button type="button" class="modal-close architecture-close" aria-label="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body architecture-modal-body">
+                <div class="modal-image-container architecture-image-container">
+                    <img src="./imagenes/Malaga-Stays-AWS-Architecture.png" alt="Málaga Stays AWS Architecture" class="modal-image architecture-modal-image">
+                </div>
+                <div class="modal-info architecture-modal-info">
+                    <p>Route 53 resuelve el dominio; CloudFront entrega el contenido mediante HTTPS y accede con OAC al bucket privado de S3. AWS Certificate Manager proporciona el certificado TLS.</p>
+                    <div class="modal-technologies">
+                        <span class="modal-tech-tag">Route 53</span>
+                        <span class="modal-tech-tag">CloudFront</span>
+                        <span class="modal-tech-tag">S3</span>
+                        <span class="modal-tech-tag">ACM</span>
+                        <span class="modal-tech-tag">OAC</span>
+                    </div>
+                    <div class="modal-buttons">
+                        <a href="https://malaga-stays.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Visitar web</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer portfolio-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-identity">
+                    <div class="footer-mark">
+                        <img src="./imagenes/hcx-logo.png" alt="" class="footer-logo-img" width="96" height="48" aria-hidden="true">
+                    </div>
+                    <div>
+                        <strong>Hassan Chafi Xavier</strong>
+                        <p>Data Engineer · Cloud Engineer</p>
+                    </div>
+                </div>
+
+                <div class="footer-socials" aria-label="Professional links">
+                    <a href="mailto:hassan.chafi@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/hassan-chafi-xavier-b27b501b0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/hassxa" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom footer-bottom-modern">
+                <p>&copy; 2026 Hassan Chafi Xavier · <span>Todos los derechos reservados.</span></p>
+                <a href="#hero" class="back-to-top"><span>Volver arriba</span> <i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script-v10.js?v=20261118-portfolio"></script>
+</body>
+</html>
