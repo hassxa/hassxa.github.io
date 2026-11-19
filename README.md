@@ -21,7 +21,7 @@ La web está disponible únicamente en español. El botón «Descargar CV» util
 ## Proyectos
 
 - **Málaga Stays** — web pública sobre S3 privado, CloudFront, Route 53, ACM y OAC. Incluye enlace a la web y diagrama de arquitectura.
-- **QR Code Generator API** — FastAPI, Docker, ECR, ECS Fargate y CloudWatch. El despliegue temporal se validó y se detuvo para controlar costes. Solo está habilitado el enlace al [repositorio](https://github.com/hassxa/qr-code-generator-api); el botón de arquitectura quedará deshabilitado hasta disponer del diagrama.
+- **QR Code Generator API** — FastAPI, Docker, ECR, ECS Fargate y CloudWatch. El despliegue temporal se validó y se detuvo para controlar costes. Incluye el [repositorio](https://github.com/hassxa/qr-code-generator-api) y el diagrama de arquitectura AWS, accesible desde el portfolio.
 
 
 ## Posicionamiento

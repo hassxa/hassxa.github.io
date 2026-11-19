@@ -20,7 +20,7 @@
       .topbar-nav{margin-left:auto;display:flex;align-items:center;gap:8px}.topbar-nav a{color:#fff;text-decoration:none}
       @media(max-width:760px){.portfolio-topbar{padding:10px 10px 0}.topbar-nav{display:none}.brand-mark-hcx{width:72px;min-width:72px;height:38px}.brand-logo-img{width:72px;height:38px}}
     </style>
-    <link rel="stylesheet" href="./style-v10.css?v=20260924-2">
+    <link rel="stylesheet" href="./style-v10.css?v=20261119-clean-cards">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -167,7 +167,6 @@
                                 <span class="project-status">En producción</span>
                             </div>
                             <p class="project-description">Web de alojamientos turísticos con infraestructura AWS: contenido en S3 privado, distribución global mediante CloudFront, dominio gestionado con Route 53 y HTTPS con ACM. El acceso al origen está restringido mediante OAC.</p>
-                            <p class="project-proof"><i class="fas fa-check-circle" aria-hidden="true"></i> Sitio público operativo · Entrega HTTPS · Origen S3 privado</p>
                             <div class="project-tags">
                                 <span class="project-tag">AWS</span>
                                 <span class="project-tag">Amazon S3</span>
@@ -205,7 +204,6 @@
                                 <span class="project-status project-status-verified">Despliegue probado</span>
                             </div>
                             <p class="project-description">API REST con FastAPI para generar códigos QR en PNG. Construí la imagen con Docker, la publiqué en ECR y verifiqué su ejecución en ECS Fargate con logs en CloudWatch. La demo se desplegó temporalmente para controlar costes.</p>
-                            <p class="project-proof"><i class="fas fa-check-circle" aria-hidden="true"></i> Despliegue validado · HTTP 200 · Logs en CloudWatch</p>
                             <div class="project-tags">
                                 <span class="project-tag">Python</span>
                                 <span class="project-tag">FastAPI</span>
@@ -215,9 +213,9 @@
                                 <span class="project-tag">CloudWatch</span>
                             </div>
                             <div class="project-links">
-                                <button type="button" class="project-link project-link-disabled" disabled aria-label="Diagrama de arquitectura pendiente">
+                                <button type="button" class="project-link secondary project-link-button" id="openQrArchitecture" aria-haspopup="dialog" aria-controls="qrArchitectureModal">
                                     <i class="fas fa-diagram-project"></i>
-                                    <span>Arquitectura próximamente</span>
+                                    <span>Ver arquitectura</span>
                                 </button>
                                 <a href="https://github.com/hassxa/qr-code-generator-api" target="_blank" rel="noopener noreferrer" class="project-link primary">
                                     <i class="fab fa-github"></i>
@@ -301,6 +299,37 @@
         </div>
     </div>
 
+    <!-- QR Code Generator API Architecture Modal -->
+    <div id="qrArchitectureModal" class="modal" aria-hidden="true">
+        <div class="modal-content architecture-modal-content" role="dialog" aria-modal="true" aria-labelledby="qrArchitectureTitle">
+            <div class="modal-header">
+                <h2 id="qrArchitectureTitle">QR Code Generator API · AWS Container Architecture</h2>
+                <button type="button" class="modal-close architecture-close" aria-label="Cerrar">&times;</button>
+            </div>
+            <div class="modal-body architecture-modal-body">
+                <div class="modal-image-container architecture-image-container">
+                    <img src="./imagenes/QR-Code-Generator-AWS-Architecture.png" alt="Diagrama de arquitectura de QR Code Generator API con Docker, ECR, ECS Fargate, VPC y CloudWatch" class="modal-image architecture-modal-image" loading="lazy">
+                </div>
+                <div class="modal-info architecture-modal-info">
+                    <p>La imagen Docker se publica en Amazon ECR y una tarea de ECS con Fargate ejecuta la API en una subred pública. El Security Group permite las peticiones HTTP al puerto 8000 y CloudWatch recoge los logs. La tarea se detuvo tras validar el despliegue para controlar costes.</p>
+                    <div class="modal-technologies">
+                        <span class="modal-tech-tag">Docker</span>
+                        <span class="modal-tech-tag">ECR</span>
+                        <span class="modal-tech-tag">ECS / Fargate</span>
+                        <span class="modal-tech-tag">VPC</span>
+                        <span class="modal-tech-tag">CloudWatch</span>
+                    </div>
+                    <div class="modal-buttons">
+                        <a href="https://github.com/hassxa/qr-code-generator-api" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-github"></i>
+                            <span>Ver repositorio</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer portfolio-footer">
         <div class="container">
             <div class="footer-main">
@@ -328,6 +357,6 @@
         </div>
     </footer>
 
-    <script src="./script-v10.js?v=20261118-portfolio"></script>
+    <script src="./script-v10.js?v=20261119-architecture"></script>
 </body>
 </html>

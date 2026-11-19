@@ -39,31 +39,40 @@ function initializeAnimations() {
 }
 
 function initializeArchitectureModal() {
-  const modal = document.getElementById('architectureModal');
-  const openButton = document.getElementById('openArchitecture');
-  const closeButton = modal?.querySelector('.architecture-close');
-  if (!modal || !openButton || !closeButton) return;
-  let lastFocused = null;
-  const open = () => {
-    lastFocused = document.activeElement;
-    modal.style.display = 'block';
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    closeButton.focus();
-  };
-  const close = () => {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    lastFocused?.focus?.();
-  };
-  openButton.addEventListener('click', open);
-  closeButton.addEventListener('click', close);
-  modal.addEventListener('click', (event) => {
-    if (event.target === modal) close();
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') close();
+  const modalPairs = [
+    ['architectureModal', 'openArchitecture'],
+    ['qrArchitectureModal', 'openQrArchitecture']
+  ];
+
+  modalPairs.forEach(([modalId, buttonId]) => {
+    const modal = document.getElementById(modalId);
+    const openButton = document.getElementById(buttonId);
+    const closeButton = modal?.querySelector('.architecture-close');
+    if (!modal || !openButton || !closeButton) return;
+
+    let lastFocused = null;
+    const open = () => {
+      lastFocused = document.activeElement;
+      modal.style.display = 'block';
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeButton.focus();
+    };
+    const close = () => {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      lastFocused?.focus?.();
+    };
+
+    openButton.addEventListener('click', open);
+    closeButton.addEventListener('click', close);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) close();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') close();
+    });
   });
 }
 

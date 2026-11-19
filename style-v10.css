@@ -2169,19 +2169,6 @@ p {
     color: #075985;
 }
 
-.project-proof {
-    display: flex;
-    align-items: flex-start;
-    gap: .4rem;
-    margin: 0 0 1rem;
-    color: #047857;
-    font-size: .75rem;
-    font-weight: 650;
-    line-height: 1.5;
-}
-
-.project-proof i { margin-top: .15rem; }
-
 .project-link-disabled,
 .project-link-disabled:hover {
     cursor: not-allowed;
